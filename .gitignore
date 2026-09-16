@@ -1,0 +1,74 @@
+# ===== Python =====
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# ===== 虚拟环境 =====
+.venv/
+venv/
+env/
+ENV/
+
+# ===== 测试 / 类型检查 / 缓存 =====
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+.coverage.*
+htmlcov/
+
+# ===== Jupyter =====
+.ipynb_checkpoints/
+
+# ===== 模型权重 / 训练产物 =====
+# 注意：权重文件体积大，GitHub 单文件 >100MB 会直接拒收
+*.pth
+*.pt
+*.ckpt
+*.pkl
+*.h5
+*.onnx
+*.safetensors
+checkpoints/
+checkpoint/
+ckpt/
+ckpts/
+logs/
+runs/
+wandb/
+outputs/
+output/
+exp/
+experiments/
+
+# ===== 数据集 =====
+data/
+datasets/
+dataset/
+
+# ===== IDE / 编辑器 =====
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# ===== 操作系统 =====
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ===== 临时文件 =====
+*.bak
+*.tmp
+*.log
+
+# ===== 本地私有内容（不上传 GitHub） =====
+# 工作记录、笔记、草稿等仅本地保留
+docx/
