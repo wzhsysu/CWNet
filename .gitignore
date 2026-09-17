@@ -48,9 +48,13 @@ exp/
 experiments/
 
 # ===== 数据集 =====
+# 只忽略数据本体，datasets/ 下的加载代码要进仓库
+# 注意：这里不能写 `datasets/`。目录级排除后 git 不会再进入该目录，
+#       `!datasets/*.py` 这类例外规则会完全失效。
 data/
-datasets/
 dataset/
+datasets/*
+!datasets/*.py
 
 # ===== IDE / 编辑器 =====
 .vscode/

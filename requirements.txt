@@ -1,0 +1,25 @@
+# CWNet — evaluation pipeline
+# Install:  pip install -r requirements.txt
+#
+# NOTE: versions are intentionally unpinned. Pin them to the exact versions
+#       your checkpoints were evaluated with before publishing a release.
+
+torch
+torchvision
+numpy
+opencv-python
+Pillow
+omegaconf
+
+# RAW decoding + visualization (utils/common.py renders through a DNG template)
+rawpy
+
+# Evaluation metrics (SSIM) and plots
+scikit-image
+matplotlib
+
+# Experiment logging (helpers/logger.py imports wandb at module level)
+wandb
+
+# Dataset loader uses a file lock so multiple dataloader workers don't race
+filelock

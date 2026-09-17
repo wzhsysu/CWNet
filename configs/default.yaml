@@ -1,0 +1,36 @@
+mode: test # this release only contains the evaluation pipeline
+device: 'cuda'
+gpu: 0    # Only set when using a single gpu. default value -1 for use all available gpus.
+random_seed: ~
+
+model:
+  name: NAF_DA
+  ver: v1
+  solver: v1
+
+path:
+  time_format: '%y%m%d_%H%M%S'
+  date_time_model: '000000_000000_modelname'
+  log_root: '../logs'
+  ckpt_root: '../ckpts'
+  result_root: '../results'
+
+  # path params
+  # these params will be auto-initialized through utils.common.init_path function
+  log_path: ~     # tensorboard or wandb
+  ckpt_path: ~    # model checkpoint
+  result_path: ~  # visualization or else...
+  
+logger: # print & save log / tensorboard & wandb logging
+  use_wandb: false
+  wandb:
+    run_name: ~
+    project: 'CWNet'
+
+load:
+  ckpt_path: ~      # e.g. '../ckpts/000000_000000_NAF_DA_v1/best_mae_illum.pt'
+
+criterion:
+  illum_loss:
+    mod: 'MixedIllumL1'
+    alpha: 1.

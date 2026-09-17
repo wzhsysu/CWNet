@@ -1,0 +1,35 @@
+camera: ~
+
+model:
+  name: NAF_DA
+  ver: v1
+  solver: v1
+
+# Test & Visualization
+test:
+  batch_size: 1
+  num_workers: 8
+  visualize_result: false # needs a RAW template under datasets/ (not shipped) - see README
+  visualize_smooth: false
+  smooth_gamma: 1.5
+  smooth_colorspace: 'RAW'
+  save_npy: false
+
+data:
+  root: '/PATH/TO/LSMI/galaxy_512'  # replace with your local LSMI dataset root
+  img_pool: [1,2,3]
+  normalize: true
+  maxval: ~
+  random_crop: false
+  img_size: 256
+  illum_aug: false
+  chroma_sampling_method: ~ # 'pool', 'random'
+  uncalculable: -1
+  mask_uncalculable: ~
+  mask_highlight: ~
+  mask_black: true
+
+criterion:
+  key_pairs:
+    # name of loss terms
+    - 'illum_loss'
