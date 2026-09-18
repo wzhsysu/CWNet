@@ -7,5 +7,5 @@ python main.py \
         data.random_crop=false \
         criterion.key_pairs=[illum_loss] \
         camera=galaxy \
-        load.ckpt_path=../ckpts/XXX \
+        load.ckpt_path=/PATH/TO/ckpt.pt \
         test.visualize_result=false

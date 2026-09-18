@@ -2,9 +2,6 @@
 
 Official implementation of the paper “Revisiting Multi-Illuminant White Balance: A Simpler and Better Baseline”, ACMMM2026.
 
-> **Scope of this release.** This repository contains the **evaluation pipeline only**.
-> The training pipeline is not included — `main.py` runs in `mode=test` and nothing else.
-
 ## Installation
 
 ```bash
@@ -15,15 +12,12 @@ Requires Python 3.9+ and a CUDA-capable GPU. Set `device: 'cpu'` in `configs/def
 
 ## Dataset
 
-Evaluation uses the **LSMI** (Large-Scale Multi-Illuminant) dataset.
-
-<!-- TODO: add dataset download link -->
-Dataset: **`<TODO: dataset link>`**
+- **LSMI** dataset — third-party, by Kim et al. (ICCV 2021). Not part of this project.
+- Download and terms of use: [LSMI dataset repository](https://github.com/DY112/LSMI-dataset)
 
 ## Checkpoint
 
-<!-- TODO: add pretrained checkpoint download link -->
-Pretrained weights: **`<TODO: checkpoint link>`**
+<!-- [Pretrained weights](https://drive.google.com/file/d/1z6GmSZyGdknXjb8XjnjAAjNvX9VjzJg2/view?usp=sharing) -->
 
 ## Evaluation
 
@@ -46,13 +40,6 @@ Pretrained weights: **`<TODO: checkpoint link>`**
    ```
 
 The script evaluates the test split and reports MAE.
-
-## Notes on visualization
-
-`test.visualize_result` is **off by default**. Turning it on re-renders predictions
-through a camera RAW template (`datasets/<camera>.dng`), and **those templates are not
-distributed with this release**. If you need the visualizations, place your own
-`<camera>.dng` under `datasets/` and set `test.visualize_result=true`.
 
 <!-- ## Citation
 

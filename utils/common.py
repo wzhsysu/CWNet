@@ -25,7 +25,7 @@ def init_path(cfg):
             ckpt_filename = 'resume_' + os.path.basename(cfg.load.ckpt_path).split('.')[0]
         elif cfg.mode == 'test':
             ckpt_filename = 'test_' + os.path.basename(cfg.load.ckpt_path).split('.')[0]
-        cfg.path.date_time_model = cfg.load.ckpt_path.split('/')[2]
+        cfg.path.date_time_model = os.path.basename(os.path.dirname(cfg.load.ckpt_path))
 
     if 'finetune' in cfg.model.solver:
         ckpt_filename += f'_finetune_{cfg.camera}'
