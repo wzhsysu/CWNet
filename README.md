@@ -18,7 +18,7 @@ See the [LSMI dataset repository](https://github.com/DY112/LSMI-dataset) for dow
 
 ## Checkpoint
 
-[Pretrained weights](https://drive.google.com/file/d/1z6GmSZyGdknXjb8XjnjAAjNvX9VjzJg2/view?usp=sharing)
+<!-- [Pretrained weights](https://drive.google.com/file/d/1z6GmSZyGdknXjb8XjnjAAjNvX9VjzJg2/view?usp=sharing) -->
 
 ## Evaluation
 
