@@ -2,6 +2,8 @@
 
 Official implementation of the paper “Revisiting Multi-Illuminant White Balance: A Simpler and Better Baseline”, ACMMM2026.
 
+**Note:** The synthesis method is based on a prior work [link](https://github.com/timothybrooks/unprocessing).
+
 ## Installation
 
 ```bash
